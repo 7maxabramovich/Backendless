@@ -1,0 +1,336 @@
+p, span, div, body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #18191f;
+  font-weight: bold;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+a {
+  cursor: pointer;
+  color: #18191f;
+  font-weight: bold;
+}
+body {
+  background: #ded;  
+}
+input {
+  margin-left: 15px;
+  cursor: pointer;
+}
+input[type='radio']::after {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: relative;
+  background-color: #fff;
+  content: '';
+  display: inline-block;
+  border: 2px solid white;
+}
+input[type='radio']:checked:after {
+  background-color: #000;
+}
+label {
+  cursor: pointer;
+}
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: #aba;
+  border-bottom: 4px solid #787;
+  z-index: 1;
+}
+.drop {
+  display: none;
+}
+@media (max-width: 1080px) {
+  input {
+    display: none;
+  } 
+  label {
+    border: 1px solid #777;
+    padding: 5px;
+    border-radius: 3px;
+    background: #ddd;
+    margin: 0 0 0 20px;
+  }
+}
+.theme2 {
+  background: #555;
+}
+.theme2 header {
+  background: #333;
+  border-bottom-color: #111;
+}
+.theme2 h1,
+.theme2 div,
+.theme2 p,
+.theme2 a {
+  color: #fff;
+}
+.theme2 footer {
+  background: #333;
+  border-top-color: #111;
+}
+.theme2 .footer__social__ins {
+  background: #fff;  
+}
+.theme2 svg {
+  fill: #fff;  
+}
+.theme3 {
+  background: #aaa;
+}
+.theme3 header {
+  background: #555;
+  border-bottom-color: #333;
+}
+.theme3 h1,
+.theme3 div,
+.theme3 p,
+.theme3 a {
+  color: #fff;
+}
+.theme3 footer {
+  background: #555;
+  border-top-color: #333;
+}
+.theme3 .footer__social__ins {
+  background: #fff;  
+}
+.theme3 svg {
+  fill: #fff;  
+}
+@media (max-width: 1080px) {
+  .theme2 label {
+    background: #555;  
+  }
+  .theme3 label {
+    background: #777;  
+  }
+  input[checked] + label {
+    color: #fff;
+    background: #111;
+  }
+}
+@media (max-width: 639px) {
+  .header-menu {
+    position: relative;
+  }
+  .drop {
+    display: block;
+    background: #ddd;
+    margin: 0;
+    border: 1px solid;
+    color: #000;
+    font-size: 16px;
+    padding: 5px;
+    font-weight: bold;
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    width: 130px;
+  }
+  .theme2 .drop {
+    color: #fff;
+    background: #555;
+  }
+  .theme3 .drop {
+    color: #fff;
+    background: #777;
+  }
+  div.drop-wrap:after {
+    position: absolute;
+    content: "\2039";
+    font-size: 26px;
+    top: 2px;
+    transform: rotate(-90deg);
+    right: 8px;
+  }
+  div.drop-wrap[data-active]:after {
+    transform: rotate(90deg);
+    right: 5px;
+  }
+  .drop-wrap-content {
+    display: none;
+    position: absolute;
+  }
+  input[checked] + label {
+    color: #fff;
+    background: #111;
+    border-top: 1px solid #fff;
+  }
+  label {
+    display: block;
+    border-radius: 0;
+    border-bottom: 1px solid;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    margin: 0;
+    width: 130px;
+  }
+}
+@keyframes skaleX {
+  0% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+h1 {
+  width: 330px;
+  text-align: center;
+  margin: 20px auto;
+  animation: skaleX 2s linear infinite alternate;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+img:hover {
+  box-shadow: 0px 0px 5px 3px;
+}
+.backendless-gallery-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0 10px 10px 0; 
+}
+@media (min-width: 1081px) {
+  .backendless-gallery-container a:nth-child(16n + 1) {
+    grid-row: auto /span 3;
+    grid-column: auto /span 3;
+  }
+  .backendless-gallery-container a:nth-child(16n + 10) {
+    grid-row: auto /span 3;
+    grid-column: auto /span 3;
+  }
+}  
+@media (min-width: 640px) and (max-width: 1080px) {
+  .backendless-gallery-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .backendless-gallery-container a:nth-child(3n + 1) {
+    grid-row: auto /span 2;
+    grid-column: auto /span 2;
+  }
+}
+@media (max-width: 639px) {
+  .backendless-gallery-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .backendless-gallery-container a:nth-child(4n + 1) {
+    grid-column: auto /span 3;
+  }
+}
+.backendless-gallery-container a {
+  margin: 10px 0 0 10px;
+}
+footer {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: #aba;
+  border-top: 4px solid #787;
+}
+.footer__info a {
+  margin-right: 20px;
+}
+.footer__social__ins {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: black;
+  mask-image: url(https://7maxabramovich.github.io/site/img/ins.svg);
+  -webkit-mask-image: url(https://7maxabramovich.github.io/site/img/ins.svg);
+}
+.footer__social a {
+  margin: 0 5px;
+  text-decoration: none;
+}
+@media (max-width: 639px) {
+  footer {
+    display: block;
+    text-align: center;
+  }
+  .footer__info {
+    margin-bottom: 15px;
+  }
+  .footer__info a {
+    margin: 10px;
+  }
+}
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 200ms ease-in;
+  pointer-events: none;
+  margin: 0;
+  padding: 0;
+}
+.modal:target {
+  opacity: 1;
+  pointer-events: auto;
+  overflow-y: auto;
+}
+.modal-dialog {
+  position: relative;
+}
+@media (min-width: 640px) {
+  .modal-dialog {
+    max-width: 500px;
+    margin: 30px auto;
+  }
+}
+.modal-content {
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: .3rem;
+}
+.modal-content p,
+.modal-content a {
+  color: #000;  
+}
+@media (min-width: 1080px) {
+  .modal-content {
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+  }
+}
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+.modal-title {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.close {
+  font-family: sans-serif;
+  font-size: 24px;
+  line-height: 1;
+  opacity: .5;
+  text-decoration: none;
+}
+.close:focus,
+.close:hover {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: .75;
+}
+.modal-body {
+  padding: 15px;
+}

@@ -76,7 +76,7 @@ header {
   background: #333;
   border-top-color: #111;
 }
-.theme2 .footer__social__ins {
+.theme2 .footer__social__instagram {
   background: #fff;  
 }
 .theme2 svg {
@@ -99,7 +99,7 @@ header {
   background: #555;
   border-top-color: #333;
 }
-.theme3 .footer__social__ins {
+.theme3 .footer__social__instagram {
   background: #fff;  
 }
 .theme3 svg {
@@ -241,7 +241,15 @@ footer {
 .footer__info a {
   margin-right: 20px;
 }
-.footer__social__ins {
+.footer__social__instagram {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: black;
+  mask-image: url(https://7maxabramovich.github.io/site/img/ins.svg);
+  -webkit-mask-image: url(https://7maxabramovich.github.io/site/img/ins.svg);
+}
+.footer__social__linkedin {
   display: inline-block;
   width: 25px;
   height: 25px;

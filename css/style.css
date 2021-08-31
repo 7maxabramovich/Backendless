@@ -76,7 +76,7 @@ header {
   background: #333;
   border-top-color: #111;
 }
-.theme2 .footer__social__instagram {
+.theme2 .footer__social a {
   background: #fff;  
 }
 .theme2 svg {
@@ -99,8 +99,8 @@ header {
   background: #555;
   border-top-color: #333;
 }
-.theme3 .footer__social__instagram {
-  background: #fff;  
+.theme3 .footer__social a {
+  background: #fff;  	
 }
 .theme3 svg {
   fill: #fff;  
@@ -241,6 +241,14 @@ footer {
 .footer__info a {
   margin-right: 20px;
 }
+.footer__social a {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: black;	
+  margin: 0 5px;
+  text-decoration: none;
+}
 .footer__social__instagram {
   display: inline-block;
   width: 25px;
@@ -250,16 +258,28 @@ footer {
   -webkit-mask-image: url(https://7maxabramovich.github.io/site/img/ins.svg);
 }
 .footer__social__linkedin {
-  display: inline-block;
-  width: 25px;
-  height: 25px;
-  background: black;
-  mask-image: url(https://7maxabramovich.github.io/site/img/ins.svg);
-  -webkit-mask-image: url(https://7maxabramovich.github.io/site/img/ins.svg);
+  mask-image: url(https://7maxabramovich.github.io/Backendless/img/linkedin.svg);
+  -webkit-mask-image: url(https://7maxabramovich.github.io/Backendless/img/linkedin.svg);
 }
-.footer__social a {
-  margin: 0 5px;
-  text-decoration: none;
+.footer__social__twitter {
+  mask-image: url(https://7maxabramovich.github.io/Backendless/img/twitter.svg);
+  -webkit-mask-image: url(https://7maxabramovich.github.io/Backendless/img/twitter.svg);	
+}
+.footer__social__facebook {
+  mask-image: url(https://7maxabramovich.github.io/Backendless/img/facebook.svg);
+  -webkit-mask-image: url(https://7maxabramovich.github.io/Backendless/img/facebook.svg);	
+}
+.footer__social__github {
+  mask-image: url(https://7maxabramovich.github.io/Backendless/img/github.svg);
+  -webkit-mask-image: url(https://7maxabramovich.github.io/Backendless/img/github.svg);	
+}
+.footer__social__slack {
+  mask-image: url(https://7maxabramovich.github.io/Backendless/img/slack.svg);
+  -webkit-mask-image: url(https://7maxabramovich.github.io/Backendless/img/slack.svg);	
+}
+.footer__social__youtube {
+  mask-image: url(https://7maxabramovich.github.io/Backendless/img/youtube.svg);
+  -webkit-mask-image: url(https://7maxabramovich.github.io/Backendless/img/youtube.svg);	
 }
 @media (max-width: 639px) {
   footer {

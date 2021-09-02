@@ -1,10 +1,17 @@
-p, span, div, body {
+@font-face {
+  font-family: Roboto;
+  src: url('../vendor/Roboto/Roboto-Regular.ttf') format('truetype'); 
+}
+p, span, div, body, button {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   color: #18191f;
   font-weight: bold;
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-family: Roboto;
+}
+article h1 {
+  font-size: 2em;
 }
 a {
   cursor: pointer;
@@ -12,7 +19,7 @@ a {
   font-weight: bold;
 }
 body {
-  background: #ded;  
+  background: #fef;  
 }
 input {
   margin-left: 15px;
@@ -34,142 +41,118 @@ input[type='radio']:checked:after {
 label {
   cursor: pointer;
 }
+button {
+  border: 1px solid #777;
+  padding: 5px;
+  border-radius: 3px;
+  background: #ddd;
+  margin: 0 0 0 20px;
+  font-size: 16px;
+}
+button[checked] {
+  color: #fff;
+  background: #555;
+}
+select {
+  padding: 5px;
+  background: #ddd;
+  font-size: 16px;
+  font-family: Roboto;
+  color: #18191f;
+  font-weight: bold;
+}
+option {
+  font-weight: bold;
+}
+.dark-theme select {
+  color: #fff;  
+  background: #666;
+}
+.gray-theme select {
+  color: #fff;  
+  background: #999;
+}
 header {
   position: sticky;
   top: 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 10px;
-  background: #aba;
-  border-bottom: 4px solid #787;
+  background: #b8e4e4;
+  border-bottom: 4px solid #aaa;
   z-index: 1;
 }
-.drop {
-  display: none;
+.dark-theme {
+  background: #483848;
 }
-@media (max-width: 1080px) {
-  input {
-    display: none;
-  } 
-  label {
-    border: 1px solid #777;
-    padding: 5px;
-    border-radius: 3px;
-    background: #ddd;
-    margin: 0 0 0 20px;
-  }
-}
-.theme2 {
-  background: #555;
-}
-.theme2 header {
-  background: #333;
+.dark-theme header {
+  background: #282838;
   border-bottom-color: #111;
 }
-.theme2 h1,
-.theme2 div,
-.theme2 p,
-.theme2 a {
+.dark-theme h1,
+.dark-theme div,
+.dark-theme p,
+.dark-theme a {
   color: #fff;
 }
-.theme2 footer {
-  background: #333;
+.dark-theme footer {
+  background: #282838;
   border-top-color: #111;
 }
-.theme2 .footer__social a {
+.dark-theme .footer__social a {
   background: #fff;  
 }
-.theme2 svg {
+.dark-theme svg {
   fill: #fff;  
 }
-.theme3 {
-  background: #aaa;
+.gray-theme {
+  background: #807880;
 }
-.theme3 header {
-  background: #555;
+.gray-theme header {
+  background: #554f55;
   border-bottom-color: #333;
 }
-.theme3 h1,
-.theme3 div,
-.theme3 p,
-.theme3 a {
+.gray-theme h1,
+.gray-theme div,
+.gray-theme p,
+.gray-theme a {
   color: #fff;
 }
-.theme3 footer {
-  background: #555;
+.gray-theme footer {
+  background: #554f55;
   border-top-color: #333;
 }
-.theme3 .footer__social a {
-  background: #fff;  	
+.gray-theme .footer__social a {
+  background: #fff;    
 }
-.theme3 svg {
+.gray-theme svg {
   fill: #fff;  
 }
+.drop-wrap-content-tablet {
+  display: none;
+}
+@media (min-width: 640px) and (max-width: 1080px) {
+  .drop-wrap-content-tablet {
+    display: block;
+  }  
+}
+.drop-wrap-content-mobile {
+  display: none;  
+}
+@media (max-width: 639px) {
+  .drop-wrap-content-mobile {
+    display: block;  
+  }
+}
 @media (max-width: 1080px) {
-  .theme2 label {
-    background: #555;  
-  }
-  .theme3 label {
-    background: #777;  
-  }
-  input[checked] + label {
-    color: #fff;
-    background: #111;
+  .drop-wrap-content-desktop {
+    display: none;
   }
 }
 @media (max-width: 639px) {
   .header-menu {
     position: relative;
-  }
-  .drop {
-    display: block;
-    background: #ddd;
-    margin: 0;
-    border: 1px solid;
-    color: #000;
-    font-size: 16px;
-    padding: 5px;
-    font-weight: bold;
-    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-    width: 130px;
-  }
-  .theme2 .drop {
-    color: #fff;
-    background: #555;
-  }
-  .theme3 .drop {
-    color: #fff;
-    background: #777;
-  }
-  div.drop-wrap:after {
-    position: absolute;
-    content: "\2039";
-    font-size: 26px;
-    top: 2px;
-    transform: rotate(-90deg);
-    right: 8px;
-  }
-  div.drop-wrap[data-active]:after {
-    transform: rotate(90deg);
-    right: 5px;
-  }
-  .drop-wrap-content {
-    display: none;
-    position: absolute;
-  }
-  input[checked] + label {
-    color: #fff;
-    background: #111;
-    border-top: 1px solid #fff;
-  }
-  label {
-    display: block;
-    border-radius: 0;
-    border-bottom: 1px solid;
-    border-left: 1px solid;
-    border-right: 1px solid;
-    margin: 0;
-    width: 130px;
   }
 }
 @keyframes skaleX {
@@ -234,9 +217,10 @@ footer {
   bottom: 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 10px;
-  background: #aba;
-  border-top: 4px solid #787;
+  background: #b8e4e4;
+  border-top: 4px solid #aaa;
 }
 .footer__info a {
   margin-right: 20px;
@@ -245,41 +229,42 @@ footer {
   display: inline-block;
   width: 25px;
   height: 25px;
-  background: black;	
+  background: black;  
   margin: 0 5px;
   text-decoration: none;
 }
 .footer__social__instagram {
-  display: inline-block;
-  width: 25px;
-  height: 25px;
-  background: black;
-  mask-image: url(https://7maxabramovich.github.io/site/img/ins.svg);
-  -webkit-mask-image: url(https://7maxabramovich.github.io/site/img/ins.svg);
+  mask-image: url(https://7maxabramovich.github.io/Backendless/img/instagram.svg);
+  -webkit-mask-image: url(https://7maxabramovich.github.io/Backendless/img/instagram.svg);
 }
 .footer__social__linkedin {
   mask-image: url(https://7maxabramovich.github.io/Backendless/img/linkedin.svg);
   -webkit-mask-image: url(https://7maxabramovich.github.io/Backendless/img/linkedin.svg);
 }
-.footer__social__twitter {
+.footer__social .footer__social__twitter {
+  width: 30px;
   mask-image: url(https://7maxabramovich.github.io/Backendless/img/twitter.svg);
-  -webkit-mask-image: url(https://7maxabramovich.github.io/Backendless/img/twitter.svg);	
+  -webkit-mask-image: url(https://7maxabramovich.github.io/Backendless/img/twitter.svg);  
 }
-.footer__social__facebook {
+.footer__social .footer__social__facebook {
+  width: 12px;
   mask-image: url(https://7maxabramovich.github.io/Backendless/img/facebook.svg);
-  -webkit-mask-image: url(https://7maxabramovich.github.io/Backendless/img/facebook.svg);	
+  -webkit-mask-image: url(https://7maxabramovich.github.io/Backendless/img/facebook.svg);  
 }
-.footer__social__github {
+.footer__social .footer__social__github {
+  width: 30px;
   mask-image: url(https://7maxabramovich.github.io/Backendless/img/github.svg);
-  -webkit-mask-image: url(https://7maxabramovich.github.io/Backendless/img/github.svg);	
+  -webkit-mask-image: url(https://7maxabramovich.github.io/Backendless/img/github.svg);  
 }
-.footer__social__slack {
+.footer__social .footer__social__slack {
+  width: 24px;
   mask-image: url(https://7maxabramovich.github.io/Backendless/img/slack.svg);
-  -webkit-mask-image: url(https://7maxabramovich.github.io/Backendless/img/slack.svg);	
+  -webkit-mask-image: url(https://7maxabramovich.github.io/Backendless/img/slack.svg);  
 }
-.footer__social__youtube {
+.footer__social .footer__social__youtube {
+  width: 24px;
   mask-image: url(https://7maxabramovich.github.io/Backendless/img/youtube.svg);
-  -webkit-mask-image: url(https://7maxabramovich.github.io/Backendless/img/youtube.svg);	
+  -webkit-mask-image: url(https://7maxabramovich.github.io/Backendless/img/youtube.svg);  
 }
 @media (max-width: 639px) {
   footer {

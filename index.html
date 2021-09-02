@@ -25,49 +25,58 @@
   <header>
     <div class="header-logo">Backendless</div>
     <div class="header-menu">
-      <div class="drop-wrap">
-        <input class="drop" value="Light Theme" disabled />
+      <div class="drop-wrap-content-desktop">
+        <input type="radio" name="themes" id="light-theme" checked="checked"/>
+        <label class="" for="light-theme">Light Theme</label>
+        <input type="radio" name="themes" id="dark-theme"/>
+        <label class="" for="dark-theme">Dark Theme</label>
+        <input type="radio" name="themes" id="gray-theme"/>
+        <label class="" for="gray-theme">Gray Theme</label>
       </div>
-      <div class="drop-wrap-content">
-        <input type="radio" name="themes" id="theme1" checked="checked"/>
-        <label class="" for="theme1">Light Theme</label>
-        <input type="radio" name="themes" id="theme2" />
-        <label class="" for="theme2">Dark Theme</label>
-        <input type="radio" name="themes" id="theme3" />
-        <label class="" for="theme3">Gray Theme</label>
+      <div class="drop-wrap-content-tablet">
+        <button value="light-theme">Light Theme</button>
+        <button value="dark-theme">Dark Theme</button>
+        <button value="gray-theme">Gray Theme</button>
+      </div>
+      <div class="drop-wrap-content-mobile">
+        <select>
+          <option value="light-theme">Light Theme</option>
+          <option value="dark-theme">Dark Theme</option>
+          <option value="gray-theme">Gray Theme</option>
+        </select>
       </div>
     </div>
   </header>
 
-  <div class="container">
+  <article class="container">
     <h1>Backendless Gallery</h1>
     <div class="backendless-gallery-container">
-        <a href="#open"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open"><img alt="img" src="img/1000x600.png"></a>
+        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
+        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
+        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
+        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
+        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
+        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
+        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
+        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
+        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
+        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
+        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
+        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
+        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
+        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
+        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
+        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
+        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
+        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
+        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
+        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
+        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
+        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
+        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
+        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
     </div>
-  </div>
+  </article>
 
   <footer>
     <div class="footer__info">
@@ -87,7 +96,7 @@
     </div>
   </footer>
 
-  <div id="open" class="modal">
+  <div id="open-modal" class="modal">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">

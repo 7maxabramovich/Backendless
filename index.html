@@ -16,7 +16,7 @@
   <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <!--   end jquery   -->
- 
+  <link rel="stylesheet" type="text/css" href="vendor/hystmodal.css"> 
   <link rel="stylesheet" type="text/css" href="css/style.css"/>  
   <script src="js/js.js"></script>
 </head>
@@ -48,33 +48,33 @@
     </div>
   </header>
 
-  <article class="container">
+  <article class="wrap-backendless-gallery-container">
     <h1>Backendless Gallery</h1>
     <div class="backendless-gallery-container">
-        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
-        <a href="#open-modal"><img alt="img" src="img/1000x600.png"></a>
+        <a data-hystmodal="#open-hystmodal"><img alt="img" src="img/1000x600.png"></a>
+        <a data-hystmodal="#open-hystmodal"><img alt="img" src="img/1000x600.png"></a>
+        <a data-hystmodal="#open-hystmodal"><img alt="img" src="img/1000x600.png"></a>
+        <a data-hystmodal="#open-hystmodal"><img alt="img" src="img/1000x600.png"></a>
+        <a data-hystmodal="#open-hystmodal"><img alt="img" src="img/1000x600.png"></a>
+        <a data-hystmodal="#open-hystmodal"><img alt="img" src="img/1000x600.png"></a>
+        <a data-hystmodal="#open-hystmodal"><img alt="img" src="img/1000x600.png"></a>
+        <a data-hystmodal="#open-hystmodal"><img alt="img" src="img/1000x600.png"></a>
+        <a data-hystmodal="#open-hystmodal"><img alt="img" src="img/1000x600.png"></a>
+        <a data-hystmodal="#open-hystmodal"><img alt="img" src="img/1000x600.png"></a>
+        <a data-hystmodal="#open-hystmodal"><img alt="img" src="img/1000x600.png"></a>
+        <a data-hystmodal="#open-hystmodal"><img alt="img" src="img/1000x600.png"></a>
+        <a data-hystmodal="#open-hystmodal"><img alt="img" src="img/1000x600.png"></a>
+        <a data-hystmodal="#open-hystmodal"><img alt="img" src="img/1000x600.png"></a>
+        <a data-hystmodal="#open-hystmodal"><img alt="img" src="img/1000x600.png"></a>
+        <a data-hystmodal="#open-hystmodal"><img alt="img" src="img/1000x600.png"></a>
+        <a data-hystmodal="#open-hystmodal"><img alt="img" src="img/1000x600.png"></a>
+        <a data-hystmodal="#open-hystmodal"><img alt="img" src="img/1000x600.png"></a>
+        <a data-hystmodal="#open-hystmodal"><img alt="img" src="img/1000x600.png"></a>
+        <a data-hystmodal="#open-hystmodal"><img alt="img" src="img/1000x600.png"></a>
+        <a data-hystmodal="#open-hystmodal"><img alt="img" src="img/1000x600.png"></a>
+        <a data-hystmodal="#open-hystmodal"><img alt="img" src="img/1000x600.png"></a>
+        <a data-hystmodal="#open-hystmodal"><img alt="img" src="img/1000x600.png"></a>
+        <a data-hystmodal="#open-hystmodal"><img alt="img" src="img/1000x600.png"></a>
     </div>
   </article>
 
@@ -96,20 +96,19 @@
     </div>
   </footer>
 
-  <div id="open-modal" class="modal">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <p class="modal-title">Hello!</p>
-          <a href="#close" title="Close" class="close">×</a>
-        </div>
-        <div class="modal-body">    
-          <p>How are you?</p>
+  <div class="hystmodal" id="open-hystmodal" aria-hidden="true">
+    <div class="hystmodal__wrap">
+      <div class="hystmodal__window" role="dialog" aria-modal="true">
+        <button class="hystmodal__close" data-hystclose>Закрыть</button>
+        <div class="hystmodal__styled">
+          <div class="h1">Hello!</div>
+          <p class="h2">How are you?</p>
         </div>
       </div>
     </div>
   </div>
+
+  <script src="vendor/hystmodal.js"></script>
   
 </body>
-  
 </html>

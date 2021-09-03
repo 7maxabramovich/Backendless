@@ -3,7 +3,7 @@ $(document).ready(function() {
   $('input').click(function() {
     $('body').attr('class', $(this).attr('id'));
   });
-  
+    
   $('button').click(function(event) {
     $('button').removeAttr('checked');
     $(this).attr('checked', 'true');

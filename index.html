@@ -48,6 +48,47 @@
     </div>
   </header>
 
+<div id="box1">
+  <div id="menu"></div>
+</div>
+
+<style>
+#box1 {
+  width: 200px;
+  height: 200px;
+  background: red;
+	margin: 30px;
+	position: relative;
+  border-radius: 50%;
+}
+#menu {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background: #000;
+	transition: all 1s ease 0s;
+}
+</style>
+
+<script>
+$(document).ready(function(){
+  $('#box1').on('mousemove', function(e){
+		$('#menu').offset({top: parseInt(e.pageY - $('#menu').height() / 2),left: parseInt(e.pageX - $('#menu').width() / 2)});
+  });
+
+	$('#box1').on('mouseout', function(e){
+		$('#menu').css({'top': 0,'left': 0});
+	});
+});
+</script>
+
+
+
+
+
   <article class="wrap-backendless-gallery-container">
     <h1>Backendless Gallery</h1>
     <div class="backendless-gallery-container">
